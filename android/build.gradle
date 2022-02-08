@@ -33,9 +33,6 @@ android {
     defaultConfig {
         minSdkVersion 19
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        configurations.all {
-            resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
-        }
     }
     lintOptions {
         disable 'InvalidPackage'
@@ -50,4 +47,8 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+
+configurations.all {
+    resolutionStrategy { force 'androidx.core:core-ktx:1.6.0' }
 }
